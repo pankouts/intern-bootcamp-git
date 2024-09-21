@@ -1,0 +1,26 @@
+Instructions File:
+
+After I set up my Github account and I configured SSH connection with GitHub in my terminal, I created a repo called meawsomerepo (git@github.com:pankouts/myawesomerepo.git) 
+and cloned it locally to my terminal. The repo was created with a README.md file only. In this repo, I created a file called question.txt and I pushed my 
+committed changes from my local machine to the remote GitHub repo. Next, I created a new branch called my-new-branch in which I edited the question.txt file and 
+I also added a new random.txt file. I committed the changes and pushed my committed changes from my local machine to the remote GitHub repo, where others can see it or clone it. 
+I edited the two files again by adding additional questions,and used rebase squash to squash the multiple commits into 1 commit. Then, I pushed my committed changes 
+from my local machine to the remote GitHub repo and merged changes from my-new-branch into the main branch. Then I deleted the second branch with the command 
+git branch -d my-new-branch.
+
+
+Then, I used the current workshop repository that contains the instructions.txt file as the upstream repository to make a contribution to. Firstly, I forked the repository 
+called intern-bootcamp-git from the upstream repository (git@github.com/intern-bootcamp-git.git). I then cloned the forked repository to my local machine 
+by navigating to the desired path in my terminal and using the git clone command. This created a local copy of the repository on my machine. I entered the cloned directory 
+using cd intern-bootcamp-git and verified the remote repository setup with git remote -v. This confirmed that the origin URL pointed to my forked GitHub repository (git@github.com
+/intern-bootcamp-git.git). Next, I added the upstream repository to my remote configuration using the command git remote add upstream git@github.com:umeding/intern-bootcamp-git.git.
+I verified the setup again with git remote -v and confirmed that both origin and upstream were correctly configured. The, to add a new feature or code, 
+I started by creating a new branch called feature in my local repository.I verified that I was on the feature branch and checked the contents of the repository using ls.
+I opened the file attendees.txt and added my name and email, Panos Koutsoukos pankouts@bu.edu. After saving the changes, I staged the file for Git to track using, I commited
+the changes and pushed the feature branch to my remote GitHub repository using git push origin feature.To confirm that the changes were successfully pushed, 
+I checked my repository on the GitHub webpage to verify that the updated file was present in the feature branch.After adding my changes to the feature branch, I proceeded to 
+create a Pull Request (PR) to merge these changes into the upstream repository.To create a Pull Request (PR), I first went to the upstream repository on GitHub and navigated 
+to the "Pull Requests" tab, where I clicked on "New Pull Request." I selected my feature branch as the source and the upstream main branch as the target. I added a title, 
+a description of the changes, and assigned reviewers before creating the PR. Next, I ensured my local repository was up-to-date by running git fetch upstream to get the 
+latest changes and then rebased my feature branch with git rebase upstream/main.Then, force-pushed my feature branch using git push -f origin feature to update the PR 
+with the rebased changes, ensuring it was now synchronized with the upstream repository.
